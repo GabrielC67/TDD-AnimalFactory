@@ -3,6 +3,7 @@ package rocks.zipcodewilmington;
 import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Cat;
+import rocks.zipcodewilmington.animals.Dog;
 
 import java.util.Date;
 
@@ -40,4 +41,166 @@ public class CatTest {
         Assert.assertEquals(givenId, retrievedId);
     }
 
+    @Test
+    public void setNameTest1() {
+        //Given
+        String givenName = "Little Reds";
+        Date givenBirthDate = new Date();
+        Integer givenID = 0;
+
+        //When
+        Cat cat = new Cat(givenName, givenBirthDate, givenID);
+
+        //When
+        String retrievedName = cat.getName();
+
+
+        //Then
+        Assert.assertEquals(givenName, retrievedName);
+    }
+
+    @Test
+    public void setNameTest2() {
+        //Given
+        String givenName = "Edmond";
+        Date givenBirthDate = new Date();
+        Integer givenID = 1;
+
+        //When
+        Cat cat = new Cat(givenName, givenBirthDate, givenID);
+
+        //When
+        String retrievedName = cat.getName();
+
+
+        //Then
+        Assert.assertEquals(givenName, retrievedName);
+    }
+
+    @Test
+    public void setNameTest3() {
+        //Given
+        String givenName = "Peanut";
+        Date givenBirthDate = new Date();
+        Integer givenID = 2;
+
+        //When
+        Cat cat = new Cat(givenName, givenBirthDate, givenID);
+
+        //When
+        String retrievedName = cat.getName();
+
+
+        //Then
+        Assert.assertEquals(givenName, retrievedName);
+    }
+
+    @Test
+    public void speakTest1() {
+        String givenName = "";
+        Date givenBirthDate = new Date();
+        Integer givenID = 2;
+        String catSpeak = "meow!";
+
+
+        Cat cat = new Cat(givenName, givenBirthDate, givenID);
+
+        String catSpeakTest1 = cat.speak();
+
+        Assert.assertEquals(catSpeak, catSpeakTest1);
+    }
+
+
+    @Test
+    public void speakTest2() {
+        String givenName = "";
+        Date givenBirthDate = new Date();
+        Integer givenID = 3;
+
+        Dog dog = new Dog(null, null, null);
+        Cat cat = new Cat(givenName, givenBirthDate, givenID);
+
+        String dogSpeak = dog.speak();
+        String catSpeakTest2 = cat.speak();
+
+        Assert.assertNotEquals(dogSpeak, catSpeakTest2);
+    }
+
+    @Test
+    public void setBirthDateTest1(){
+        String givenName = "";
+        Date givenBirthDate = new Date(1635702400000L);
+        Integer givenID = 4;
+
+        Cat cat = new Cat(givenName, givenBirthDate, givenID);
+
+        Date retrievedBirthdate1 = cat.getBirthDate();
+
+        Assert.assertEquals(givenBirthDate, retrievedBirthdate1);
+    }
+
+    @Test
+    public void setBirthDateTest2(){
+        String givenName = "";
+        Date givenBirthDate = new Date();
+        Integer givenID = 5;
+
+        Cat cat = new Cat(givenName, givenBirthDate, givenID);
+
+        Date retrievedBirthdate2 = cat.getBirthDate();
+
+        Assert.assertEquals(givenBirthDate, retrievedBirthdate2);
+    }
+
+    @Test
+    public void getID1(){
+        String givenName = "";
+        Date givenBirthDate = new Date();
+        Integer givenID = 7;
+
+        Cat cat = new Cat(givenName, givenBirthDate, givenID);
+
+        Integer getID = cat.getId();
+
+        Assert.assertEquals(givenID, getID = 7);
+    }
+
+    @Test
+    public void getID2(){
+        String givenName = "";
+        Date givenBirthDate = new Date();
+        Integer givenID = 9;
+
+        Cat cat = new Cat(givenName, givenBirthDate, 8);
+
+        Integer getID = cat.getId();
+
+        //Tested 8 as a parameter and used 8 as the initialized variable.
+        Assert.assertNotEquals(givenID, getID);
+    }
+
+    @Test
+    public void getID3(){
+        String givenName = "Bartholomew";
+        Date givenBirthDate = new Date();
+        Integer givenID = 9;
+
+        Cat cat = new Cat(givenName, givenBirthDate, 9);
+
+        Integer getID = cat.getId();
+
+        Assert.assertEquals(givenID, getID);
+    }
+
+//    @Test
+//    public void eatFoodTest1(){
+//        String givenName = "";
+//        Date givenBirthDate = new Date();
+//        Integer givenID = 6;
+//
+//        Cat cat = new Cat(givenName, givenBirthDate, givenID);
+//
+//
+//    }
 }
+
