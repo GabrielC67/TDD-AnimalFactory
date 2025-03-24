@@ -156,13 +156,13 @@ public class CatTest {
     public void getID1(){
         String givenName = "";
         Date givenBirthDate = new Date();
-        Integer givenID = 7;
+        Integer givenID = 5;
 
         Cat cat = new Cat(givenName, givenBirthDate, givenID);
 
         Integer getID = cat.getId();
 
-        Assert.assertEquals(givenID, getID = 7);
+        Assert.assertEquals(givenID, getID);
     }
 
     @Test
@@ -185,7 +185,7 @@ public class CatTest {
         Date givenBirthDate = new Date();
         Integer givenID = 9;
 
-        Cat cat = new Cat(givenName, givenBirthDate, 9);
+        Cat cat = new Cat(givenName, givenBirthDate, givenID);
 
         Integer getID = cat.getId();
 
