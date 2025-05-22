@@ -77,9 +77,9 @@ public class DogHouseTest {
     @Test
     public void testGetNumberOfDogs(){
         setup();
-        DogHouse.add(new Dog("Lisa", new Date(), 4));
+        DogHouse.add(new Dog("LeftEye", new Date(), 4));
         DogHouse.add(new Dog("TBoz", new Date(), 5));
-        DogHouse.add(new Dog("Chili", new Date(), 5));
+        DogHouse.add(new Dog("Chili", new Date(), 6));
 
         int numberOfDogs = DogHouse.getNumberOfDogs();
 
